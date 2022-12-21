@@ -1,0 +1,15 @@
+﻿
+<h3>this is the child page</h3>
+
+<p>
+    <button @onclick="OnClickCallback">
+        Click here for callback
+    </button>
+
+</p>
+
+
+@code {
+    [Parameter]
+    public EventCallback<MouseEventArgs> OnClickCallback {get; set; }
+}

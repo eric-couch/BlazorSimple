@@ -1,0 +1,21 @@
+﻿@page "/event-handler-example-3"
+
+@for (var i = 0; i < 4; i++)
+{
+    <p>
+        <button @onclick="ReportPointerLocation">
+            Where is my mouse pointer?
+        </button>
+    </p>
+}
+
+<h3>@mousePointerMessage</h3>
+
+@code {
+    private string? mousePointerMessage;
+
+    private void ReportPointerLocation(MouseEventArgs e)
+    {
+        mousePointerMessage = $"Mouse pointer is at {e.ScreenX}, {e.ScreenY}";
+    }
+}

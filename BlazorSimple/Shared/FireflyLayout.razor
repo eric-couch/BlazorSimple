@@ -1,0 +1,21 @@
+﻿@inherits LayoutComponentBase
+
+<header>
+    <h1>Firefly Episode Database</h1>
+</header>
+
+<nav>
+    <a href="masterlist">Master List</a>
+    <a href="search">Search</a>
+    <a href="add">Add Episode</a>
+</nav>
+
+@Body
+
+<footer>
+    @Trademark
+</footer>
+
+@code {
+    public string Trademark { get; set; } = "Firefly is a trademark of Universal Studios.";
+}
